@@ -1,6 +1,9 @@
+import 'package:dio/dio.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tarfoodlion/screens/show_cart.dart';
+import 'package:tarfoodlion/utility/my_constant.dart';
 import 'package:tarfoodlion/utility/my_style.dart';
 import 'package:tarfoodlion/utility/signout_process.dart';
 import 'package:tarfoodlion/widget/show_card_shop.dart';
@@ -18,6 +21,22 @@ class _MainUserState extends State<MainUser> {
   void initState() {
     super.initState();
     findUser();
+    aboutNotification();
+  }
+
+  Future<Null> aboutNotification() async {
+    FirebaseMessaging firebaseMessaging = FirebaseMessaging();
+    await firebaseMessaging.getToken().then((value) async{
+      String token = value;
+      print('token = $token');
+
+      SharedPreferences preferences = await SharedPreferences.getInstance();
+      String id = preferences.getString('id');
+      String url = '${MyConstant().domain}/tarfood/editTokenWhereId.php?isAdd=true&id=$id&Token=$token';
+
+      await Dio().get(url);
+
+    });
   }
 
   Future<Null> findUser() async {
@@ -45,14 +64,15 @@ class _MainUserState extends State<MainUser> {
         onTap: () => signOutProcess(context),
       );
 
-
-      ListTile showCartMenu() => ListTile(
+  ListTile showCartMenu() => ListTile(
         leading: Icon(Icons.shopping_cart),
         title: Text('แสดงตระกล้า'),
         subtitle: Text('แสดง รายการอาหาร ใน ตระกล้า'),
-        onTap: (){
+        onTap: () {
           Navigator.pop(context);
-          MaterialPageRoute route = MaterialPageRoute(builder: (context) => ShowCart(),);
+          MaterialPageRoute route = MaterialPageRoute(
+            builder: (context) => ShowCart(),
+          );
           Navigator.pushAndRemoveUntil(context, route, (route) => false);
         },
       );

@@ -90,7 +90,7 @@ class _ShowCartState extends State<ShowCart> {
       sums.add(model.sum);
     }
 
-    String nameFood = nameShop.toString();
+    String nameFood = nameFoods.toString();
     String price = prices.toString();
     String amount = amounts.toString();
     String sum = sums.toString();
