@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "604158996228",
+    "firebase_url": "https://tarfood-83997.firebaseio.com",
+    "project_id": "tarfood-83997",
+    "storage_bucket": "tarfood-83997.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604158996228:android:412e57aa3930962f2b6a51",
+        "android_client_info": {
+          "package_name": "com.flutterthailand.tarfoodlion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604158996228-i1c4cuoupot710h5j2r8oasddnkijluo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhZQG6bXG2GsGIDitU_BFxmhvf3popsW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604158996228-i1c4cuoupot710h5j2r8oasddnkijluo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
