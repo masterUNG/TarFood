@@ -27,7 +27,7 @@ class _OrderListShopState extends State<OrderListShop> {
     String url =
         '${MyConstant().domain}/tarfood/getOrderWhereIdShop.php?isAdd=true&idShop=$idShop';
     await Dio().get(url).then((value) {
-      print('res = $value');
+      print('res =################>>>>>> $value');
       var result = value.data;
       for (var map in result) {
         OrderModel model = OrderModel.fromJson(map);

@@ -7,10 +7,9 @@ import 'package:tarfoodlion/model/food_model.dart';
 import 'package:tarfoodlion/screens/add_food_menu.dart';
 
 import '../utility/my_constant.dart';
-import '../utility/my_constant.dart';
+
 import '../utility/my_style.dart';
-import '../utility/my_style.dart';
-import '../utility/my_style.dart';
+
 
 class ListFoodMenuShop extends StatefulWidget {
   @override
@@ -44,7 +43,7 @@ class _ListFoodMenuShopState extends State<ListFoodMenuShop> {
     String url =
         '${MyConstant().domain}/tarfood/getFoodWhereIdShop.php?isAdd=true&idShop=$idShop';
     Response response = await Dio().get(url);
-    print('res ==>> $response');
+    print('res ###########################==>> $response');
 
     if (response.toString() != 'null') {
 
