@@ -6,11 +6,6 @@ import 'package:tarfoodlion/model/food_model.dart';
 import 'package:tarfoodlion/screens/detail_food_order.dart';
 
 import '../model/user_model.dart';
-import '../model/user_model.dart';
-import '../model/user_model.dart';
-import '../model/user_model.dart';
-import '../utility/my_constant.dart';
-import '../utility/my_constant.dart';
 import '../utility/my_constant.dart';
 import '../utility/my_style.dart';
 import '../utility/normal_dialog.dart';
@@ -26,7 +21,7 @@ class _ShowCardShopState extends State<ShowCardShop> {
 
   @override
   void initState() {
-    // TODO: implement initState
+   
     super.initState();
     readShop();
   }
@@ -103,7 +98,7 @@ class _ShowCardShopState extends State<ShowCardShop> {
     return shopWidgets.length == 0
         ? MyStyle().showProgress()
         : GridView.extent(
-            maxCrossAxisExtent: 120.0,
+            maxCrossAxisExtent: 150.0,
             children: shopWidgets,
           );
   }

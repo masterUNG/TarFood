@@ -65,6 +65,15 @@ class MyStyle {
         ),
       );
 
+      Text showTitleH3(String title) => Text(
+        title,
+        style: TextStyle(
+          fontSize: 16.0,
+          color: Colors.blue.shade900,
+          fontWeight: FontWeight.bold,
+        ),
+      );
+
   Container showLogo() {
     return Container(
       //ใส่container เพื่อนกำหนดนรูป
